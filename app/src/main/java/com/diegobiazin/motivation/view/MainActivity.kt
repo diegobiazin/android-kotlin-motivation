@@ -6,16 +6,20 @@ import android.view.View
 import com.diegobiazin.motivation.R
 import com.diegobiazin.motivation.mock.Mock
 import com.diegobiazin.motivation.util.MotivationConstants
+import com.diegobiazin.motivation.util.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mFilter: Int = MotivationConstants.PHRASE_FILTER.ALL
+    private lateinit var mSecurityPreferences : SecurityPreferences
     private val mMock = Mock()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mSecurityPreferences = SecurityPreferences(this)
 
         //Eventos
         setListeners()
@@ -23,6 +27,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //inicializa
         handleFilter(R.id.imageAll)
         refreshPhrase()
+        verifyUserName()
+    }
+
+    private fun verifyUserName() {
+        textUserName.text = mSecurityPreferences.getStoreString(MotivationConstants.KEY.PERSON_NAME)
     }
 
     override fun onClick(view: View) {
