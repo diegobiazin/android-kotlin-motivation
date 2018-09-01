@@ -4,12 +4,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.diegobiazin.motivation.R
+import com.diegobiazin.motivation.mock.Mock
 import com.diegobiazin.motivation.util.MotivationConstants
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mFilter: Int = MotivationConstants.PHRASE_FILTER.ALL
+    private val mMock = Mock()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         //inicializa
         handleFilter(R.id.imageAll)
+        refreshPhrase()
     }
 
     override fun onClick(view: View) {
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val listId = listOf(R.id.imageAll, R.id.imageSun, R.id.imageHappy)
         if (id in listId) {
             handleFilter(id)
-        } else {
+        } else if (id == R.id.buttonNewPhrase) {
             refreshPhrase()
         }
     }
@@ -59,7 +62,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun refreshPhrase() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        textPhrase.text = mMock.getPhrase(mFilter)
     }
 
 }
