@@ -1,8 +1,14 @@
 package com.diegobiazin.motivation.util
 
-class MotivationConstants private constructor(){
+class MotivationConstants private constructor() {
 
-    object KEY{
+    object KEY {
         val PERSON_NAME = "personName"
+    }
+
+    object PHRASE_FILTER {
+        val ALL = 1
+        val SUN = 2
+        val HAPPY = 3
     }
 }

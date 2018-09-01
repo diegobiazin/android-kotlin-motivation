@@ -1,10 +1,11 @@
-package com.diegobiazin.motivation
+package com.diegobiazin.motivation.view
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.diegobiazin.motivation.R
 import com.diegobiazin.motivation.util.MotivationConstants
 import com.diegobiazin.motivation.util.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_splash.*
