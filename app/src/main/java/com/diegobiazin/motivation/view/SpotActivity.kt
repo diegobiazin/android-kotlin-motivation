@@ -2,6 +2,7 @@ package com.diegobiazin.motivation.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.diegobiazin.motivation.R
 
 class SpotActivity : AppCompatActivity() {
 
