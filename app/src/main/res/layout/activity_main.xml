@@ -20,7 +20,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:src="@drawable/ic_all_unselected" />
+            app:srcCompat="@drawable/ic_all_unselected" />
 
         <ImageView
             android:id="@+id/imageSun"
@@ -28,7 +28,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:src="@drawable/ic_sun_unselected" />
+            app:srcCompat="@drawable/ic_sun_unselected" />
 
         <ImageView
             android:id="@+id/imageHappy"
@@ -36,7 +36,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:src="@drawable/ic_happy_unselected" />
+            app:srcCompat="@drawable/ic_happy_unselected" />
 
     </LinearLayout>
 
