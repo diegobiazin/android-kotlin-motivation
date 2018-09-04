@@ -10,6 +10,6 @@
     <color name="colorTextButton">#FFFFFF</color>
     <color name="colorTextLightGray">#F9F9F9</color>
 
-    <color name="menuItemSelected">#DEF5F5</color>
-    <color name="menuItemUnselected">#B1B1B1</color>
+    <color name="menuItemSelected">#FFFFFF</color>
+    <color name="menuItemUnselected">#CECECE</color>
 </resources>

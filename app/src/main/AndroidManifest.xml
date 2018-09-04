@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/StatusBarColor" />
         <activity
             android:name=".view.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.FullScreen">
